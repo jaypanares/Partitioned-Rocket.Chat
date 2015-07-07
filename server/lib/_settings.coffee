@@ -1,4 +1,5 @@
 @Settings = new Meteor.Collection 'settings'
+Partitioner.partitionCollection(@Settings)
 
 loadEnvConfigs = (settings) ->
 	if settings.ENV?

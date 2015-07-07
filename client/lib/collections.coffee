@@ -1,9 +1,14 @@
 @UserAndRoom = new Meteor.Collection null
+Partitioner.partitionCollection(@UserAndRoom)
 @ChatMessageHistory = new Meteor.Collection null
+Partitioner.partitionCollection(@ChatMessageHistory)
 
 @ChatRoom = new Meteor.Collection 'data.ChatRoom'
+Partitioner.partitionCollection(@ChatRoom)
 @ChatSubscription = new Meteor.Collection 'data.ChatSubscription'
+Partitioner.partitionCollection(@ChatSubscription)
 @ChatMessage = new Meteor.Collection 'data.ChatMessage'
+Partitioner.partitionCollection(@ChatMessage)
 
 Meteor.startup ->
 	ChatMessage.find().observe

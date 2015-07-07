@@ -6,6 +6,8 @@ querystring = Npm.require('querystring')
 OEmbed =
 	cache: new Meteor.Collection 'oembed_cache'
 
+Partitioner.partitionCollection(OEmbed.cache)
+
 getUrlContent = (urlObj, redirectCount = 5, callback) ->
 	if _.isString(urlObj)
 		urlObj = URL.parse urlObj

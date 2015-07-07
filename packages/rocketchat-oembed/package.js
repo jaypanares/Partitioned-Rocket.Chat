@@ -11,7 +11,8 @@ Package.onUse(function(api) {
 	api.use([
 		'templating',
 		'coffeescript',
-		'rocketchat:lib@0.0.1'
+		'rocketchat:lib@0.0.1',
+		'mizzao:partitioner'
 	]);
 
 	api.addFiles('client/baseWidget.html', 'client');

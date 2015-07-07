@@ -41,7 +41,6 @@ rocketchat:autolinker
 rocketchat:emojione
 rocketchat:file
 rocketchat:highlight
-rocketchat:hubot
 #rocketchat:irc
 rocketchat:ldap
 rocketchat:lib
@@ -59,3 +58,4 @@ yasaricli:slugify
 konecty:nrr
 konecty:change-case
 kevohagan:sweetalert
+mizzao:partitioner

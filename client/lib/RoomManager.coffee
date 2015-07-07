@@ -6,8 +6,9 @@
 	Dep = new Tracker.Dependency
 
 	init = ->
-		subscription = Meteor.subscribe('subscription')
-		return subscription
+		# Tracker.autorun ->
+			subscription = Meteor.subscribe('subscription')
+			return subscription
 
 	close = (rid) ->
 		if openedRooms[rid]
@@ -24,12 +25,12 @@
 	computation = Tracker.autorun ->
 		for rid, record of openedRooms when record.active is true
 			record.sub = [
-				Meteor.subscribe 'room', rid
-				Meteor.subscribe 'messages', rid
+				Meteor.subscribe 'room', rid, Partitioner.group()
+				Meteor.subscribe 'messages', rid, Partitioner.group()
 			]
 
 			record.ready = record.sub[0].ready() and record.sub[1].ready()
-
+			
 			Dep.changed()
 
 	setRoomExpireExcept = (except) ->

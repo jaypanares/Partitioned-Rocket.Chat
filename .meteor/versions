@@ -68,6 +68,7 @@ meteorspark:util@0.2.0
 minifiers@1.1.5
 minimongo@1.0.8
 mizzao:autocomplete@0.5.1
+mizzao:partitioner@0.5.4
 mizzao:timesync@0.3.1
 mobile-status-bar@1.0.3
 momentjs:moment@2.10.3
@@ -97,7 +98,6 @@ rocketchat:autolinker@0.0.1
 rocketchat:emojione@0.0.1
 rocketchat:file@0.0.1
 rocketchat:highlight@0.0.1
-rocketchat:hubot@0.0.1
 rocketchat:ldap@0.0.1
 rocketchat:lib@0.0.1
 rocketchat:markdown@0.0.1
